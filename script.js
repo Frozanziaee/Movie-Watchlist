@@ -1,10 +1,11 @@
+const searchForm = document.getElementById('search-form')
 const inputSearch = document.getElementById("input-search")
 const searchBtn = document.getElementById("search-btn")
 const film = document.getElementById("film")
 
 
 
-searchBtn.addEventListener("submit", (e) =>{
+searchForm.addEventListener("submit", (e) =>{
     e.preventDefault()
 
     let search = inputSearch.value
@@ -14,7 +15,7 @@ searchBtn.addEventListener("submit", (e) =>{
    }
 })
 
-function findYourFilm(movieName = "ninja" ){
+function findYourFilm(movieName = "Spider-Man" ){
     fetch(`http://www.omdbapi.com/?apikey=d35a8728&s=${movieName}&plot=short`)
         .then(response => response.json())
         .then(data => {
@@ -36,12 +37,17 @@ function findYourFilm(movieName = "ninja" ){
                             <div class="film-info">
                                 <p>${dataMovie.Runtime}</p>
                                 <p> ${dataMovie.Genre}</p>
-                                <p class="add">+</p>
-                                <p>Watchlist</p>
+                                <div class="add">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    <p>Watchlist</p>
+                                </div>    
                             </div>
                             <p class="film-para">${dataMovie.Plot}</p>
+                            
                         </div>
+                        
                         </div>
+                        <hr />
                         `
                     })
             });
@@ -49,4 +55,4 @@ function findYourFilm(movieName = "ninja" ){
         })
 }
 
-findYourFilm()
+

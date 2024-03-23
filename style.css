@@ -10,13 +10,13 @@ body {
   font-style: normal;
   font-variation-settings:
     "slnt" 0;
+    height: 100vh;
+    background-color: whitesmoke;
 }
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #FFFFFF;
-    background-color: #D1D5DB;
 }
 header {
     display: flex;
@@ -27,13 +27,16 @@ header {
     background-image: url(THJJRUhNlEc.png);
     background-size: cover;
     background-color: #0E0E0E;
+    color: #FFFFFF;
 }
 .hero {
-    padding: 1em;
+    padding: 1.5em;
 }
-div .search-container {
-     top: 24em; 
-  }
+.watchlist{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 input[type=text] {
     padding: 0.352em;
     padding-right: 12em;
@@ -53,6 +56,26 @@ div .search-container button {
 div .search-container button:hover {
     background: #ccc;
   }
+.ican {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.fa-film, .start {
+    color: #DFDDDD;;
+    text-align: center;
+}
+.fa-film{
+    font-size: 4rem;
+}
+.start {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
 .movie {
     display: flex;
     gap: 1em;
@@ -86,14 +109,14 @@ p {
 }
 .film-info {
     display: flex;
-    gap: 0.5em;
+    gap: 1em;
     margin-top: 0;
 }
 .add {
-    border-radius: 50%;
-    background: #111827;
-    padding: 0.3em
+    display: flex;
+    gap: 0.3em;
 }
+
 .film-para {
     max-width: 342px;
     font-size: 0.875rem;
