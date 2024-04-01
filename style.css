@@ -28,25 +28,35 @@ header {
     background-size: cover;
     background-color: #0E0E0E;
     color: #FFFFFF;
+    padding: 2em;
 }
 .hero {
     padding: 1.5em;
 }
+.title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.437rem;
+    letter-spacing: -4.5%;
+}
 .watchlist{
     color: #FFFFFF;
     text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
 }
 
 input[type=text] {
-    padding: 0.352em;
-    padding-right: 12em;
+    padding: 1.3em;
+    padding-right: 10em;
     font-size: 1.0625rem;
     border: none;
   }
   
 div .search-container button {
-    padding: 6px 10px;
-    margin-top: 8px;
+    padding: .3em 1em;
+    margin-top: 0.25em;
     background: #ddd;
     font-size: 17px;
     border: none;
@@ -55,7 +65,10 @@ div .search-container button {
   
 div .search-container button:hover {
     background: #ccc;
-  }
+}
+.search-ican {
+    font-size: 1.5rem;
+}
 .ican {
     display: flex;
     flex-direction: column;
@@ -75,15 +88,14 @@ div .search-container button:hover {
     font-weight: 700;
     line-height: 1.25rem;
 }
-
 .movie {
     display: flex;
     gap: 1em;
     margin: 1em;
 }
 .film-img{
-    width: 99px;
-    height: 147.41px;
+    width: 24%;
+    height: 30%;
 }
 .description {
     margin-top: 0.5em;
@@ -92,11 +104,12 @@ div .search-container button:hover {
     display: flex;
     align-items: flex-start;
     margin-bottom: 0;
+    margin-top: .5em;
     gap: 0.5em;
 }
 h3 {
     font-size: 1.125rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #000000;
     margin-top: 0;
     margin-bottom: 0;
@@ -110,7 +123,8 @@ p {
 .film-info {
     display: flex;
     gap: 1em;
-    margin-top: 0;
+    line-height: 1rem;
+    margin-top: 1em;
 }
 .add {
     display: flex;
@@ -118,8 +132,54 @@ p {
 }
 
 .film-para {
-    max-width: 342px;
+    max-width: 420px;
     font-size: 0.875rem;
     color: #6B7280 ;
     margin-top: 0.5em;
+    
+}
+@media (min-width: 550px) {
+    .title {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.25rem ;
+    }
+    .film-para {
+        font-size: 0.9375rem;
+        line-height: 1.5rem;
+        margin-top: 1.5em;
+    }
+    input[type=text] {
+        padding-right: 17em; 
+    }
+    div .search-container button {
+        padding: 1em 1.7em;
+    }
+    p {
+       font-size: 0.87rem;
+    }
+}
+@media (min-width: 650px) {
+    .title {
+        font-size: 2.674rem;
+    }
+    h3 {
+        font-size: 1.375rem;
+    }
+    .film-para {
+        font-size: 1rem;
+        line-height: 2.5em;
+        margin-top: 2em;
+        max-width: 480px;
+    }
+    input[type=text] {
+        padding-right: 24em; 
+    }
+    div .search-container button {
+        padding: 1em 2em;
+    }
+    p {
+        font-size: 0.875rem;
+    }
 }
