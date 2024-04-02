@@ -2,6 +2,7 @@ const searchForm = document.getElementById('search-form')
 const inputSearch = document.getElementById("input-search")
 const searchBtn = document.getElementById("search-btn")
 const film = document.getElementById("film")
+const modeEl = document.getElementById("mode-el")
 
 
 
@@ -13,6 +14,12 @@ searchForm.addEventListener("submit", (e) =>{
         findYourFilm(search)
         inputSearch.value = ""
    }
+})
+
+modeEl.addEventListener("click", (e) =>{
+    document.body.classList.toggle("dark-mode")
+    inputSearch.classList.toggle("input")
+    searchBtn.classList.toggle("search-button")   
 })
 
 function findYourFilm(movieName = "Spider-Man" ){
@@ -30,7 +37,7 @@ function findYourFilm(movieName = "Spider-Man" ){
                         <div class="movie">
                             <img class="film-img" src="${movie.Poster}" />
                             <div class="description">
-                                <div class="film-title">
+                                <div id="t-title" class="film-title">
                                     <h3>${movie.Title}</h3>
                                     <p class="vots">⭐${movie.imdbRating}</p>
                                 </div>
@@ -78,3 +85,5 @@ document.addEventListener("click", (e) => {
     }
     
 })
+
+
