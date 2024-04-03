@@ -23,14 +23,14 @@ modeEl.addEventListener("click", (e) =>{
 })
 
 function findYourFilm(movieName = "Spider-Man" ){
-    fetch(`http://www.omdbapi.com/?apikey=d35a8728&s=${movieName}&plot=full`)
+    fetch(`https://www.omdbapi.com/?apikey=d35a8728&s=${movieName}&plot=full`)
         .then(response => response.json())
         .then(data => {
             console.log(data)
             
             film.innerHTML = ``
             data.Search.forEach(element => {
-                fetch(`http://www.omdbapi.com/?apikey=d35a8728&i=${element.imdbID}`)
+                fetch(`https://www.omdbapi.com/?apikey=d35a8728&i=${element.imdbID}`)
                     .then(response => response.json())
                     .then(movie => {
                         film.innerHTML += `
@@ -75,7 +75,7 @@ document.addEventListener("click", (e) => {
         }
     
 
-    fetch(`http://www.omdbapi.com/?apikey=d35a8728&i=${imdbID}&plot=full`)
+    fetch(`https://www.omdbapi.com/?apikey=d35a8728&i=${imdbID}&plot=full`)
         .then(res => res.json())
         .then(dataMovie => {
             watchlist.push(dataMovie)
